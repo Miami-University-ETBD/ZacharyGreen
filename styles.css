@@ -1,0 +1,72 @@
+/* General body styling */
+body {
+    background-color: #000000; /* Black background */
+    color: white; /* White text color for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #FF4500; /* Bengals Orange */
+    color: white; /* White text */
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* List styling */
+ul, ol {
+    color: white; /* White text */
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: square; /* Square bullets for unordered list */
+}
+
+ol {
+    list-style-type: decimal; /* Numbered list for ordered lists */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid #FF4500; /* Border color in Bengals Orange */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #FF4500; /* Bengals Orange background for table header */
+    color: white; /* White text in table header */
+}
+
+td {
+    background-color: #1C1C1C; /* Dark blackish-gray background for table cells */
+}
+
+/* Optional: Add hover effect for table rows */
+tr:hover {
+    background-color: #333333; /* Darker gray for hover effect */
+}
+
+/* Optional: Style for links in table */
+a {
+    color: #FF4500; /* Bengals Orange link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
