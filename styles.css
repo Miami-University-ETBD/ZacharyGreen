@@ -16,6 +16,11 @@ header {
     font-size: 2.5em;
     font-weight: bold;
 }
+img {
+    float: right;
+    transform: scale (.1) ;
+}
+ 
 
 /* List styling */
 ul, ol {
