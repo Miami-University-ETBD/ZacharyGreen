@@ -4,73 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Contact Us -Football Fan Site </title>
+    <title>Contact Us -Football Fan Site</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #0c3c8d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-  
-        section {
-            margin: 20px;
-        }
-        h2 {
-            color: #0c3c8d;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: flow;
-            width: 100%;
-            bottom: 0;
-        }
-        p {
-            font-size: 16px;
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-container, .info-container {
-            width: 45%;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        ul {
-            list-style-type: circle;
-        }
-        ol {
-            list-style-type: decimal;
-        }
-        .aside-section {
-            background-color: #e0f7fa;
-            padding: 10px;
-            margin-top: 20px;
-        }
+
     </style>
 </head>
 <body>
-
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li> <a href="about.html">About</a></li>
+       <li> <a href="contact.html">contact me</a></li>
+      <li><a href="content.html">Information</a></li>  
+      <li><a href="materialize.html">Materialize!</a></li>         
+                </ul>
 <header>
     <h1>Contact Us - Football Fan Site</h1>
 </header>
@@ -80,7 +26,7 @@
         <div class="form-container">
             <h2>Get in Touch</h2>
             <p>If you have any questions about our website or the American Football teams, please reach out to us using the contact form below:</p>
-            <form action="#" method="post">
+            <form id="contactForm" action="#" method="post" onsubmit="return validateForm()">
                 <label for="name">Full Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
 
@@ -138,7 +84,7 @@
             </tr>
             <tr>
                 <td><em>Do you ship internationally?</em></td>
-                <td>Yes, the sites we have linked ship to different countires. Look at there FAQ for more information.</td>
+                <td>Yes, the sites we have linked ship to different countries. Look at there FAQ for more information.</td>
             </tr>
             <tr>
                 <td><u>How often is this site updated?</u></td>
@@ -152,6 +98,36 @@
     <p>&copy; 2025 American Football Website. All rights reserved.</p>
 </footer>
 
+
+<script>
+    // Form Validation: Check if fields are filled out
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name == "" || email == "" || message == "") {
+            alert("Please fill out all fields before submitting.");
+            return false; // Prevent form submission if any field is empty
+        } else {
+            alert("Form submitted successfully!");
+            return true; // Allow form submission if all fields are filled
+        }
+    }
+
+    // Popup interaction on button click
+    function showPopup() {
+        alert("Thank you for your interest! We'll get back to you shortly.");
+    }
+
+    // Adding an event listener for a button click to trigger the popup
+    document.addEventListener('DOMContentLoaded', function() {
+        var button = document.createElement('button');
+        button.innerHTML = "Click Me for a Popup";
+        button.onclick = showPopup;
+        document.body.appendChild(button);
+    });
+</script>
+
 </body>
 </html>
-
